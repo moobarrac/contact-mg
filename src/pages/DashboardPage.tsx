@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import LineGraph from '../components/LineGraph';
 import Map from '../components/Map';
+import TableComponent from '../components/Table';
 
 const DashboardPage = () => {
   //state to value for switching tabs
@@ -24,13 +25,16 @@ const DashboardPage = () => {
               </div>
               <div className="block">
                 <div className="ml-10 flex items-baseline space-x-4">
+                  <button className={activeTab === 'world-stats' ? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} onClick={() => handleClick('world-stats')}>
+                    World Stats
+                  </button>
                   <button className={activeTab === 'line-graph' ? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} onClick={() => handleClick('line-graph')}>
                     Line Graph
                   </button>
 
-                  <p className={activeTab === 'map' ? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} onClick={() => handleClick('map')}>
+                  <button className={activeTab === 'map' ? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"} onClick={() => handleClick('map')}>
                     Map
-                  </p>
+                  </button>
                 </div>
               </div>
             </div>
@@ -38,7 +42,9 @@ const DashboardPage = () => {
         </div>
       </nav>
       <div className='pt-10'>
-      {activeTab === 'line-graph' ? <LineGraph /> : <Map />}
+      {activeTab === 'line-graph' && <LineGraph />}
+      {activeTab === 'map' && <Map />}
+      {activeTab === 'world-stats' && <TableComponent />}
       </div>
     </div>
   );

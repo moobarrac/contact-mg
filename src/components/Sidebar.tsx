@@ -55,7 +55,7 @@ const Sidebar = () => {
         </div>
         <ul
           className={`${
-            isMenuOpen ? "block flex gap-5 flex-col w-48" : "hidden"
+            isMenuOpen ? "flex gap-5 flex-col w-48" : "hidden"
           } mt-4 md:block`}
         >
           <h1 className="text-2xl font-bold mb-20">My App</h1>
@@ -74,7 +74,7 @@ const Sidebar = () => {
               className="block py-2 hover:text-gray-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              Chart and Map
+              COVID-19 World Stats
             </Link>
           </li>
         </ul>
