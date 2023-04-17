@@ -43,7 +43,6 @@ const ContactsList = ({ onDelete, onEdit, contacts }: Props) => {
           <div
             key={id}
             className="border border-gray-300 bg-gray-800 text-white rounded-md p-4 flex flex-col justify-between w-full mx-auto sm:w-auto sm:mx-0 cursor-pointer"
-            onClick={() => handleContactClick({ id, lastName, firstName, status })}
           >
             <div className='text-white'>
               <h3 className="text-lg font-medium">{firstName} {lastName}</h3>
@@ -55,6 +54,12 @@ const ContactsList = ({ onDelete, onEdit, contacts }: Props) => {
                 className="px-2 py-1 text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none text-sm"
               >
                 Delete
+              </button>
+              <button
+                className="bg-blue-500 rounded-md text-white px-2 py-1 hover:bg-blue-600 focus:outline-none text-sm"
+                onClick={() => handleContactClick({ id, lastName, firstName, status })}
+              >
+                View
               </button>
               <button
                 className="px-2 py-1 text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none text-sm"
