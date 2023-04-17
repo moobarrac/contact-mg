@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Importing necessary modules and components
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ContactsPage from './pages/ContactsPage';
+import DashboardPage from './pages/DashboardPage';
+import Sidebar from './components/Sidebar';
 
 function App() {
+  // Rendering the JSX
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // Set up the router component for client-side routing
+    <div className='flex h-screen w-full'>
+    <BrowserRouter>
+      <Sidebar/>
+      <Routes>
+        <Route path="/" element={<ContactsPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default App; // Export the App component for use in other parts of the application
