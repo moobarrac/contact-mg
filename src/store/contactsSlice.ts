@@ -6,10 +6,15 @@ interface ContactsState {
   contacts: Contact[];
 }
 
+//store the contacts in the local storage
+const storeContacts = (contacts: Contact[]) => {
+  localStorage.setItem('contacts', JSON.stringify(contacts));
+}
 // Setting up the initial state for the contacts state
 const initialState: ContactsState = {
-  contacts: [],
+  contacts:  JSON.parse(localStorage.getItem('contacts') || '[]'),
 };
+
 
 // Setting up the initial state for the contacts state
 export const contactsSlice = createSlice({
@@ -19,16 +24,19 @@ export const contactsSlice = createSlice({
     // Creating a reducer for adding a contact to the state
     addContact: (state, action: PayloadAction<Contact>) => {
       state.contacts.push(action.payload);
+      storeContacts(state.contacts)
     },
     // Creating a reducer for deleting a contact from the state
     deleteContact: (state, action: PayloadAction<number>) => {
       state.contacts = state.contacts.filter((contact) => contact.id !== action.payload);
+      storeContacts(state.contacts)
     },
     // Creating a reducer for updating a contact in the state
     updateContact: (state, action: PayloadAction<Contact>) => {
       const index = state.contacts.findIndex((contact) => contact.id === action.payload.id);
       if (index !== -1) {
         state.contacts[index] = action.payload;
+        storeContacts(state.contacts)
       }
     },
   },
