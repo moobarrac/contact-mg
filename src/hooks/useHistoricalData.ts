@@ -1,9 +1,10 @@
 // Importing required module
 import { useQuery } from 'react-query';
+import { historicalData } from './api';
 
 // This function fetches historical data from the COVID-19 history API
 async function fetchHistoricalData() {
-  const res = await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=all');
+  const res = await fetch(historicalData);
   return res.json();
 }
 

@@ -1,10 +1,11 @@
 // Importing required module
 import { useQuery } from 'react-query';
+import { countryData } from './api';
 
 // This function fetches country data from the COVID-19 API
 
 async function fetchCountryData() {
-  const res = await fetch('https://disease.sh/v3/covid-19/countries');
+  const res = await fetch(countryData);
   return res.json();
 }
 
