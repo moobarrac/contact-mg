@@ -6,7 +6,7 @@ import TableComponent from '../components/Table';
 
 const DashboardPage = () => {
   //state to value for switching tabs
-  const [activeTab, setActiveTab] = useState('line-graph');
+  const [activeTab, setActiveTab] = useState('world-stats');
 
   // Function to handle click on tabs
   const handleClick = (tabName: string) => {
