@@ -18,7 +18,7 @@ Also, a COVID-19 tracker application that displays real-time data on the number 
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/react-contacts-app.git`
+1. Clone the repository: `git clone https://github.com/moobarrac/contact-mg.git`
 2. Navigate to the root directory of the project `cd contact-mg`
 3. Run `npm install` to install the dependencies.
 4. Run `npm start` to start the development server.
