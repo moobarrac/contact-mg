@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Contacts App and COVID-19 Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React app for managing contacts, built using TypeScript, Redux Toolkit, and React Query.
+Also, a COVID-19 tracker application that displays real-time data on the number of cases, deaths, and recoveries for countries around the world.
 
-## Available Scripts
+## Features
+- View a list of contacts
+- Add a new contact
+- Edit an existing contact
+- Delete a contact
+- View details of a contact
+- Real-time data on the number of cases, deaths, and recoveries for countries around the world
+- Interactive world map showing the number of cases by country
+- Line chart showing the global trend of cases over time
+- Bar chart showing the top 10 countries with the most cases
+- Table showing the number of cases, deaths, and recoveries for all countries
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone the repository: `git clone https://github.com/your-username/react-contacts-app.git`
+2. Navigate to the root directory of the project `cd contact-mg`
+3. Run `npm install` to install the dependencies.
+4. Run `npm start` to start the development server.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## API Endpoint
 
-### `npm test`
+The app uses the following API endpoints:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `https://disease.sh/v3/covid-19/all`: Returns global data of COVID-19 cases, including the number of confirmed cases, recovered cases, deaths, and other related statistics.
+- `https://disease.sh/v3/covid-19/countrie`s: Returns data of COVID-19 cases for all countries, including the number of confirmed cases, recovered cases, deaths, and other related statistics.`
+- `https://disease.sh/v3/covid-19/historical/all?lastdays=all`: Returns a historical data of COVID-19 cases globally, including the number of confirmed cases, recovered cases, and deaths, with the date for each data point.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- TypeScript
+- Redux Toolkit
+- React Query
+- Tailwind CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Acknowledgements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Tailwind CSS](https://tailwindcss.com/) for providing the CSS framework.
+- [React Router](https://reactrouter.com/) for providing the routing functionality.
+- [Typescript](https://typescriptlang.org/) for providing the type checking functionality.
